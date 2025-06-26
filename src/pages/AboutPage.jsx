@@ -39,9 +39,7 @@ const AboutPage = () => {
             ABOUT US
           </span>
           <h1 className="text-[2rem] xs:text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 sm:mb-8 leading-tight">
-            Creative Blog Writting and
-            <br className="block" />
-            publishing site
+            Creative Blog Writting and publishing site
           </h1>
           <p className="text-gray-500 text-base xs:text-lg sm:text-xl mb-12 max-w-2xl mx-auto leading-relaxed text-center">
             Leverage agile frameworks to provide a robust synopsis for high
