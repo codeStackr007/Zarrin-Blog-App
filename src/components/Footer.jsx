@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useNavigate, NavLink, useLocation } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 
 const currentYear = new Date().getFullYear();
 
@@ -10,9 +10,6 @@ const Footer = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
   // For nav links, scroll instantly to top
-  const handleNavLinkClick = () => {
-    window.scrollTo({ top: 0, behavior: "auto" });
-  };
   return (
     <footer className="bg-white pt-0 pb-0 px-0 border-t border-primary-200">
       <div className="flex flex-col items-center justify-center w-full max-w-4xl mx-auto pt-10 pb-6">
