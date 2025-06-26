@@ -17,20 +17,33 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`w-full border-b border-gray-100 shadow-sm sticky top-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/90 backdrop-blur-md" : "bg-transparent"
+      className={`w-full border-b border-gray-100 dark:border-gray-800 shadow-sm sticky top-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-white/90 dark:bg-gray-900/90 backdrop-blur-md"
+          : "bg-transparent"
       }`}
+      role="navigation"
+      aria-label="Main navigation"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
         {/* Logo on the left */}
         <div
           className="flex items-center cursor-pointer select-none"
           onClick={() => navigate("/")}
+          onKeyDown={(e) => e.key === "Enter" && navigate("/")}
+          tabIndex={0}
+          role="button"
+          aria-label="Go to homepage"
         >
           <img
             src={require("../assets/images/Logo.svg").default}
             alt="Zarrin Logo"
-            className="w-24 h-24 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 xl:w-36 xl:h-36 max-w-full object-contain transition-all duration-300 ease-in-out hover:scale-105 hover:drop-shadow-lg"
+            className="w-24 h-24 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 xl:w-36 xl:h-36 max-w-full object-contain transition-all duration-300 ease-in-out hover:scale-105 hover:drop-shadow-lg dark:hidden"
+          />
+          <img
+            src={require("../assets/images/Logo - Dark theme.svg").default}
+            alt="Zarrin Logo"
+            className="w-24 h-24 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 xl:w-36 xl:h-36 max-w-full object-contain transition-all duration-300 ease-in-out hover:scale-105 hover:drop-shadow-lg hidden dark:block"
           />
         </div>
 
@@ -41,8 +54,9 @@ const Navbar = () => {
             className={`relative group font-medium transition-colors duration-200 hover:text-primary-700 ${
               location.pathname === "/blog"
                 ? "text-primary-600"
-                : "text-gray-900"
+                : "text-gray-900 dark:text-gray-100"
             }`}
+            aria-current={location.pathname === "/blog" ? "page" : undefined}
           >
             Blog
             <span
@@ -56,8 +70,9 @@ const Navbar = () => {
             className={`relative group font-medium transition-colors duration-200 hover:text-primary-700 ${
               location.pathname === "/about"
                 ? "text-primary-600"
-                : "text-gray-900"
+                : "text-gray-900 dark:text-gray-100"
             }`}
+            aria-current={location.pathname === "/about" ? "page" : undefined}
           >
             About
             <span
@@ -66,26 +81,32 @@ const Navbar = () => {
               }`}
             ></span>
           </Link>
-          <img
-            src={require("../assets/images/search-minus.svg").default}
-            alt="Search"
-            className="h-6 w-6 cursor-pointer opacity-80 hover:opacity-100 transition-opacity duration-200"
-          />
-          <a
-            href="/contact"
-            className="bg-primary-600 hover:bg-primary-700 text-white font-medium px-8 py-3 rounded-lg transition-colors duration-200 shadow-none"
+          <button
+            className="h-6 w-6 cursor-pointer opacity-80 hover:opacity-100 transition-opacity duration-200 dark:invert focus:outline-none focus:ring-2 focus:ring-primary-500 rounded"
+            aria-label="Search"
+          >
+            <img
+              src={require("../assets/images/search-minus.svg").default}
+              alt=""
+              className="h-6 w-6"
+            />
+          </button>
+          <Link
+            to="/contact"
+            className="bg-primary-600 hover:bg-primary-700 text-white font-medium px-8 py-3 rounded-lg transition-colors duration-200 shadow-none focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
           >
             Contact Us
-          </a>
+          </Link>
         </div>
 
         {/* Mobile menu button */}
         <div className="md:hidden flex items-center">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500"
+            className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500"
             aria-label="Toggle menu"
             aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
           >
             {menuOpen ? (
               <svg
@@ -105,8 +126,8 @@ const Navbar = () => {
             ) : (
               <img
                 src={require("../assets/images/menu-icon.svg").default}
-                alt="Menu"
-                className="h-8 w-8"
+                alt=""
+                className="h-8 w-8 dark:invert"
               />
             )}
           </button>
@@ -115,53 +136,62 @@ const Navbar = () => {
 
       {/* Mobile dropdown menu with animation */}
       <div
-        className={`md:hidden bg-white border-b border-gray-100 shadow-sm origin-top transform-gpu transition-all duration-300 ease-in-out overflow-hidden ${
+        id="mobile-menu"
+        className={`md:hidden bg-white/90 dark:bg-gray-900/80 border-b border-gray-100 dark:border-gray-800 shadow-sm origin-top transform-gpu transition-all duration-300 ease-in-out overflow-hidden backdrop-blur-md ${
           menuOpen
             ? "scale-y-100 opacity-100 max-h-[500px]"
             : "scale-y-0 opacity-0 max-h-0 pointer-events-none"
         }`}
+        role="menu"
+        aria-hidden={!menuOpen}
       >
         <div className="flex flex-col items-start px-6 py-4 space-y-4">
           <Link
             to="/blog"
-            className={`font-medium w-full py-1 transition-colors duration-200 hover:text-primary-700 ${
+            className={`font-medium w-full py-1 transition-colors duration-200 hover:text-primary-600 dark:hover:text-primary-400 ${
               location.pathname === "/blog"
-                ? "text-primary-600"
-                : "text-gray-900"
+                ? "text-primary-600 dark:text-primary-400"
+                : "text-gray-900 dark:text-gray-100"
             }`}
             onClick={() => setMenuOpen(false)}
+            aria-current={location.pathname === "/blog" ? "page" : undefined}
+            role="menuitem"
           >
             Blog
           </Link>
           <Link
             to="/about"
-            className={`font-medium w-full py-1 transition-colors duration-200 hover:text-primary-700 ${
+            className={`font-medium w-full py-1 transition-colors duration-200 hover:text-primary-600 dark:hover:text-primary-400 ${
               location.pathname === "/about"
-                ? "text-primary-600"
-                : "text-gray-900"
+                ? "text-primary-600 dark:text-primary-400"
+                : "text-gray-900 dark:text-gray-100"
             }`}
             onClick={() => setMenuOpen(false)}
+            aria-current={location.pathname === "/about" ? "page" : undefined}
+            role="menuitem"
           >
             About
           </Link>
           <button
-            className="flex items-center space-x-2 text-gray-900 hover:text-primary-600 w-full py-1"
+            className="flex items-center space-x-2 text-gray-900 dark:text-gray-100 hover:text-primary-600 dark:hover:text-primary-400 w-full py-1 transition-colors duration-200"
             onClick={() => setMenuOpen(false)}
+            role="menuitem"
           >
             <img
               src={require("../assets/images/search-minus.svg").default}
-              alt="Search"
-              className="h-6 w-6 mr-2"
+              alt=""
+              className="h-6 w-6 mr-2 dark:invert"
             />
             <span>Search</span>
           </button>
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             className="bg-primary-600 hover:bg-primary-700 text-white font-medium px-6 py-3 rounded-lg transition-colors duration-200 w-full text-center"
             onClick={() => setMenuOpen(false)}
+            role="menuitem"
           >
             Contact Us
-          </a>
+          </Link>
         </div>
       </div>
     </nav>

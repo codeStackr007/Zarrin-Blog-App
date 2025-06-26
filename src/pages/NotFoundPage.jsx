@@ -5,7 +5,6 @@ const NotFoundPage = () => {
   const navigate = useNavigate();
   const cardRef = useRef(null);
 
-  // Animate the gradient rotation
   useEffect(() => {
     let angle = 45;
     let raf;
@@ -21,7 +20,7 @@ const NotFoundPage = () => {
   }, []);
 
   return (
-    <main className="min-h-screen bg-white flex flex-col items-center justify-center py-12 px-4">
+    <main className="min-h-screen bg-white dark:bg-gray-900 flex flex-col items-center justify-center py-12 px-4">
       <div
         ref={cardRef}
         className="relative rounded-3xl w-full max-w-xl mx-auto flex flex-col items-center justify-center py-16 px-6 shadow-lg transition-all duration-1000"

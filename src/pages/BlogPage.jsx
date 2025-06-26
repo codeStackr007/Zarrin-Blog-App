@@ -103,16 +103,16 @@ const BlogPage = () => {
   };
 
   return (
-    <main className="min-h-screen bg-white w-full">
+    <main className="min-h-screen bg-white dark:bg-gray-900 w-full">
       <section className="max-w-7xl mx-auto w-full py-12 px-4 sm:px-6 md:px-8 lg:px-12">
         <div className="text-center mb-[5rem]">
           <span className="block text-primary-400 font-semibold uppercase tracking-widest mb-4 text-xs sm:text-sm">
             Our Blogs
           </span>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Find our all blogs from here
           </h1>
-          <p className="text-gray-500 max-w-2xl mx-auto text-base sm:text-lg mb-6">
+          <p className="text-gray-500 dark:text-gray-300 max-w-2xl mx-auto text-base sm:text-lg mb-6">
             our blogs are written from very research research and well known
             writers writers so that we can provide you the best blogs and
             articles articles for you to read them all along
@@ -129,23 +129,23 @@ const BlogPage = () => {
                 />
               </div>
               <div className="mb-2 flex items-center gap-2">
-                <span className="text-xs font-bold text-gray-900 uppercase tracking-wider">
+                <span className="text-xs font-bold text-gray-900 dark:text-white uppercase tracking-wider">
                   {post.category}
                 </span>
-                <span className="text-xs text-gray-500 font-normal">
+                <span className="text-xs text-gray-500 dark:text-gray-400 font-normal">
                   {post.date}
                 </span>
               </div>
-              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 leading-tight mb-2">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-white leading-tight mb-2">
                 {post.title}
               </h3>
-              <p className="text-gray-600 text-sm sm:text-base mb-4">
+              <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base mb-4">
                 {post.desc}
               </p>
               <button
                 type="button"
                 onClick={() => navigate(post.link)}
-                className="text-primary-600 font-semibold underline underline-offset-2 hover:text-primary-700 transition-colors duration-200 text-base text-left w-max"
+                className="text-primary-600 dark:text-primary-400 font-semibold underline underline-offset-2 hover:text-primary-700 dark:hover:text-primary-300 transition-colors duration-200 text-base text-left w-max"
               >
                 Read More...
               </button>

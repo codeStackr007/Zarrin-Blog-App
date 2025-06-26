@@ -107,12 +107,12 @@ const LandingPage = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center bg-primary-600 relative overflow-hidden">
+      <section className="min-h-screen flex items-center justify-center bg-primary-600 dark:bg-[rgb(17_24_39)] relative overflow-hidden">
         <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-10 py-8 lg:py-16 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left: Text Content */}
           <div className="text-white text-left order-1 lg:order-1">
             <div className="mb-3 xl:mb-4">
-              <span className="uppercase tracking-widest text-xs sm:text-sm font-semibold text-primary-100">
+              <span className="uppercase tracking-widest text-xs sm:text-sm font-semibold text-primary-100 dark:text-gray-200">
                 Featured Post
               </span>
             </div>
@@ -122,7 +122,7 @@ const LandingPage = () => {
               <span className="block">Change the Future</span>
             </h1>
 
-            <p className="text-sm sm:text-base xl:text-xl text-primary-100 mb-6 xl:mb-10 leading-relaxed">
+            <p className="text-sm sm:text-base xl:text-xl text-primary-100 dark:text-gray-200 mb-6 xl:mb-10 leading-relaxed">
               The future of AI will see home robots having enhanced
               intelligence, increased capabilities, and becoming more personal
               and possibly cute. For example, home robots will overcome
@@ -131,8 +131,8 @@ const LandingPage = () => {
 
             <button
               type="button"
-              onClick={() => (window.location.href = "/single-blog")}
-              className="inline-block bg-white text-primary-600 font-semibold rounded-lg px-6 sm:px-8 py-3 shadow-sm hover:bg-primary-50 transition-colors duration-200 text-base sm:text-lg w-full lg:w-auto text-center mb-8 xl:mb-0"
+              onClick={() => navigate("/single-blog")}
+              className="inline-block bg-white text-primary-600 dark:text-gray-900 font-semibold rounded-lg px-6 sm:px-8 py-3 shadow-sm hover:bg-primary-50 dark:hover:bg-gray-100 transition-colors duration-200 text-base sm:text-lg w-full lg:w-auto text-center mb-8 xl:mb-0"
             >
               Read more
             </button>
@@ -153,12 +153,12 @@ const LandingPage = () => {
       </section>
 
       {/* Featured Blog Section (VR & AI) */}
-      <section className="relative flex justify-center items-center bg-gray-50 py-16 px-2 md:h-screen mb-8 md:mb-16">
+      <section className="relative flex justify-center items-center bg-gray-50 dark:bg-gray-900 py-16 px-2 md:h-screen mb-8 md:mb-16">
         {/* Desktop/Tablet: Overlapping Card Layout */}
         <div className="max-w-6xl w-full mx-auto hidden md:block">
           <div className="relative w-full">
             {/* Image */}
-            <div className="rounded-3xl overflow-hidden w-full h-[220px] xs:h-[260px] sm:h-[320px] md:h-[440px] lg:h-[460px] bg-gray-200">
+            <div className="rounded-3xl overflow-hidden w-full h-[220px] xs:h-[260px] sm:h-[320px] md:h-[440px] lg:h-[460px] bg-gray-200 dark:bg-gray-700">
               <img
                 src={require("../assets/images/Image Placeholder (1).png")}
                 alt="VR Blog"
@@ -166,16 +166,20 @@ const LandingPage = () => {
               />
             </div>
             {/* Overlapping Card */}
-            <div className="absolute right-0 bottom-0 translate-y-1/2 md:w-[80%] lg:w-[65%] xl:w-[75%] bg-white rounded-3xl shadow-xl p-6 sm:p-10 border border-gray-200 overflow-hidden">
-              <div className="flex items-center gap-4 text-sm text-gray-500 font-semibold mb-2">
-                <span className="text-black font-bold">DEVELOPMENT</span>
-                <span className="text-gray-400 font-normal">16 March 2023</span>
+            <div className="absolute right-0 bottom-0 translate-y-1/2 md:w-[80%] lg:w-[65%] xl:w-[75%] bg-white dark:bg-gray-900 rounded-3xl shadow-xl p-6 sm:p-10 border border-gray-200 dark:border-gray-700 overflow-hidden">
+              <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400 font-semibold mb-2">
+                <span className="text-black dark:text-white font-bold">
+                  DEVELOPMENT
+                </span>
+                <span className="text-gray-400 dark:text-gray-500 font-normal">
+                  16 March 2023
+                </span>
               </div>
-              <h2 className="text-lg sm:text-2xl md:text-3xl font-bold text-gray-900 leading-tight mb-2">
+              <h2 className="text-lg sm:text-2xl md:text-3xl font-bold text-gray-900 dark:text-white leading-tight mb-2">
                 How to make a Game look more attractive with New VR & AI
                 Technology
               </h2>
-              <p className="text-xs sm:text-base md:text-lg mb-2 text-gray-600">
+              <p className="text-xs sm:text-base md:text-lg mb-2 text-gray-600 dark:text-gray-300">
                 Google has been investing in AI for many years and bringing its
                 benefits to individuals, businesses and communities. Whether
                 it's publishing state-of-the-art research, building helpful
@@ -184,8 +188,8 @@ const LandingPage = () => {
               </p>
               <button
                 type="button"
-                onClick={() => (window.location.href = "/single-blog")}
-                className="mt-2 w-max px-6 py-2 rounded-lg bg-primary-50 text-primary-600 font-semibold shadow-sm hover:bg-primary-100 transition-colors duration-200 border border-primary-100"
+                onClick={() => navigate("/single-blog")}
+                className="mt-2 w-max px-6 py-2 rounded-lg bg-primary-50 dark:bg-primary-900 text-primary-600 dark:text-primary-400 font-semibold shadow-sm hover:bg-primary-100 dark:hover:bg-primary-800 transition-colors duration-200 border border-primary-100 dark:border-primary-800"
               >
                 Read More
               </button>
@@ -193,9 +197,9 @@ const LandingPage = () => {
           </div>
         </div>
         {/* Mobile: Stacked Card Layout */}
-        <div className="max-w-xl-[570px] w-full mx-auto bg-white rounded-3xl shadow-xl p-[1.3rem] sm:p-8 flex flex-col gap-4 border border-gray-200 md:hidden">
+        <div className="max-w-xl-[570px] w-full mx-auto bg-white dark:bg-gray-900 rounded-3xl shadow-xl p-[1.3rem] sm:p-8 flex flex-col gap-4 border border-gray-200 dark:border-gray-700 md:hidden">
           {/* Image with border */}
-          <div className="rounded-2xl overflow-hidden border-2 border-primary-200">
+          <div className="rounded-2xl overflow-hidden border-2 border-primary-200 dark:border-primary-800">
             <img
               src={require("../assets/images/Image Placeholder (1).png")}
               alt="VR Blog"
@@ -204,15 +208,19 @@ const LandingPage = () => {
           </div>
           {/* Card Content */}
           <div className="flex flex-col gap-2 mt-2">
-            <div className="flex items-center gap-4 text-xs sm:text-sm text-gray-500 font-semibold mb-1">
-              <span className="text-black font-bold">DEVELOPMENT</span>
-              <span className="text-gray-400 font-normal">16 March 2023</span>
+            <div className="flex items-center gap-4 text-xs sm:text-sm text-gray-500 dark:text-gray-400 font-semibold mb-1">
+              <span className="text-black dark:text-white font-bold">
+                DEVELOPMENT
+              </span>
+              <span className="text-gray-400 dark:text-gray-500 font-normal">
+                16 March 2023
+              </span>
             </div>
-            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 leading-tight mb-1">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white leading-tight mb-1">
               How to make a Game look more attractive with New VR & AI
               Technology
             </h2>
-            <p className="text-gray-600 text-sm sm:text-base mb-2">
+            <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base mb-2">
               Google has been investing in AI for many years and bringing its
               benefits to individuals, businesses and communities. Whether it's
               publishing state-of-the-art research, building helpful products or
@@ -221,8 +229,8 @@ const LandingPage = () => {
             </p>
             <button
               type="button"
-              onClick={() => (window.location.href = "/single-blog")}
-              className="mt-2 w-max px-6 py-2 rounded-lg bg-white text-primary-600 font-semibold shadow-sm hover:bg-primary-50 transition-colors duration-200 border border-primary-200"
+              onClick={() => navigate("/single-blog")}
+              className="mt-2 w-max px-6 py-2 rounded-lg bg-white dark:bg-gray-800 text-primary-600 dark:text-primary-400 font-semibold shadow-sm hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors duration-200 border border-primary-200 dark:border-gray-600"
             >
               Read More
             </button>
@@ -235,7 +243,7 @@ const LandingPage = () => {
         <div className="max-w-7xl mx-auto w-full">
           {/* Header Row */}
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8 md:mb-12 gap-4">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white">
               Our Recent Post
             </h2>
             <button
@@ -251,7 +259,7 @@ const LandingPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
             {/* Image */}
             <div className="order-1 lg:order-1">
-              <div className="rounded-2xl overflow-hidden bg-gray-200">
+              <div className="rounded-2xl overflow-hidden bg-gray-200 dark:bg-gray-700">
                 <img
                   src={require("../assets/images/Image Placeholder (1).png")}
                   alt="VR Blog"
@@ -264,20 +272,20 @@ const LandingPage = () => {
             <div className="order-2 lg:order-2 flex flex-col justify-center">
               {/* Category and Date */}
               <div className="flex items-center gap-3 mb-3">
-                <span className="text-xs sm:text-sm font-bold text-gray-900 uppercase tracking-wider">
+                <span className="text-xs sm:text-sm font-bold text-gray-900 dark:text-white uppercase tracking-wider">
                   DEVELOPMENT
                 </span>
-                <span className="text-xs sm:text-sm text-gray-500 font-normal">
+                <span className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 font-normal">
                   16 March 2023
                 </span>
               </div>
 
               {/* Title */}
-              <h3 className="text-lg sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 leading-tight mb-4 lg:mb-6">
+              <h3 className="text-lg sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 dark:text-white leading-tight mb-4 lg:mb-6">
                 How to make a Game look more attractive with New VR & AI
                 Technology
               </h3>
-              <p className="text-sm sm:text-base lg:text-lg-[1.187rem] mb-6 lg:mb-8 leading-relaxed text-gray-600">
+              <p className="text-sm sm:text-base lg:text-lg-[1.187rem] mb-6 lg:mb-8 leading-relaxed text-gray-600 dark:text-gray-300">
                 Google has been investing in AI for many years and bringing its
                 benefits to individuals, businesses and communities. Whether
                 it's publishing state-of-the-art research, building helpful
@@ -290,7 +298,7 @@ const LandingPage = () => {
                 <button
                   type="button"
                   onClick={() => navigate("/single-blog")}
-                  className="inline-flex items-center px-6 py-2.5 rounded-lg bg-primary-50 text-primary-600 font-semibold shadow-sm hover:bg-primary-100 transition-colors duration-200 border border-primary-200 text-sm sm:text-base"
+                  className="inline-flex items-center px-6 py-2.5 rounded-lg bg-primary-50 dark:bg-primary-900 text-primary-600 dark:text-primary-400 font-semibold shadow-sm hover:bg-primary-100 dark:hover:bg-primary-800 transition-colors duration-200 border border-primary-200 dark:border-primary-800 text-sm sm:text-base"
                 >
                   Read More
                 </button>
@@ -314,23 +322,23 @@ const LandingPage = () => {
                   />
                 </div>
                 <div className="mb-2 flex items-center gap-2">
-                  <span className="text-xs font-bold text-gray-900 uppercase tracking-wider">
+                  <span className="text-xs font-bold text-gray-900 dark:text-white uppercase tracking-wider">
                     {post.category}
                   </span>
-                  <span className="text-xs text-gray-500 font-normal">
+                  <span className="text-xs text-gray-500 dark:text-gray-400 font-normal">
                     {post.date}
                   </span>
                 </div>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 leading-tight mb-2">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-white leading-tight mb-2">
                   {post.title}
                 </h3>
-                <p className="text-gray-600 text-sm sm:text-base mb-4">
+                <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base mb-4">
                   {post.desc}
                 </p>
                 <button
                   type="button"
                   onClick={() => navigate(post.link)}
-                  className="text-primary-600 font-semibold underline underline-offset-2 hover:text-primary-700 transition-colors duration-200 text-base text-left w-max"
+                  className="text-primary-600 dark:text-primary-400 font-semibold underline underline-offset-2 hover:text-primary-700 dark:hover:text-primary-300 transition-colors duration-200 text-base text-left w-max"
                 >
                   Read More...
                 </button>
@@ -347,7 +355,7 @@ const LandingPage = () => {
       >
         <div className="max-w-7xl mx-auto w-full">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8 md:mb-12 gap-4">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white">
               Popular Post
             </h2>
             <button
@@ -369,23 +377,23 @@ const LandingPage = () => {
                   />
                 </div>
                 <div className="mb-2 flex items-center gap-2">
-                  <span className="text-xs font-bold text-gray-900 uppercase tracking-wider">
+                  <span className="text-xs font-bold text-gray-900 dark:text-white uppercase tracking-wider">
                     {post.category}
                   </span>
-                  <span className="text-xs text-gray-500 font-normal">
+                  <span className="text-xs text-gray-500 dark:text-gray-400 font-normal">
                     {post.date}
                   </span>
                 </div>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 leading-tight mb-2">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-white leading-tight mb-2">
                   {post.title}
                 </h3>
-                <p className="text-gray-600 text-sm sm:text-base mb-4">
+                <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base mb-4">
                   {post.desc}
                 </p>
                 <button
                   type="button"
                   onClick={() => navigate(post.link)}
-                  className="text-primary-600 font-semibold underline underline-offset-2 hover:text-primary-700 transition-colors duration-200 text-base text-left w-max"
+                  className="text-primary-600 dark:text-primary-400 font-semibold underline underline-offset-2 hover:text-primary-700 dark:hover:text-primary-300 transition-colors duration-200 text-base text-left w-max"
                 >
                   Read More...
                 </button>

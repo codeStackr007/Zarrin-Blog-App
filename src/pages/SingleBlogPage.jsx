@@ -54,21 +54,21 @@ const SingleBlogPage = () => {
     }
   };
   return (
-    <main className="flex-1 w-full bg-white">
+    <main className="flex-1 w-full bg-white dark:bg-gray-900">
       {/* Breadcrumb */}
-      <div className="max-w-4xl mx-auto w-full px-4 pt-8 pb-2 text-xs text-gray-500 font-medium">
+      <div className="max-w-4xl mx-auto w-full px-4 pt-8 pb-2 text-xs text-gray-500 dark:text-gray-400 font-medium">
         <span
-          className="text-primary-600 cursor-pointer"
+          className="text-primary-600 dark:text-primary-400 cursor-pointer"
           onClick={() => navigate("/blog")}
         >
           Blog
         </span>
         <span className="mx-2">/</span>
-        <span className="text-gray-700">Development</span>
+        <span className="text-gray-700 dark:text-gray-300">Development</span>
       </div>
       {/* Blog Title */}
       <div className="max-w-4xl mx-auto w-full px-4">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6 mt-2 leading-tight">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6 mt-2 leading-tight">
           How to make a Game look more attractive with New VR & AI Technology
         </h1>
       </div>
@@ -81,7 +81,7 @@ const SingleBlogPage = () => {
         />
       </div>
       {/* Blog Content */}
-      <div className="max-w-4xl mx-auto w-full px-4 mb-8 text-gray-700 text-base leading-relaxed">
+      <div className="max-w-4xl mx-auto w-full px-4 mb-8 text-gray-700 dark:text-gray-300 text-base leading-relaxed">
         <p className="mb-6">
           Google has been investing in AI for many years and bringing its
           benefits to individuals, businesses and communities. Whether it's
@@ -102,15 +102,15 @@ const SingleBlogPage = () => {
           power of generative AI to create, connect and collaborate.
         </p>
         {/* Quote */}
-        <blockquote className="border-l-4 border-primary-600 pl-4 mb-2">
-          <span className="block text-lg italic font-normal text-primary-700">
+        <blockquote className="border-l-4 border-primary-600 dark:border-primary-400 pl-4 mb-2">
+          <span className="block text-lg italic font-normal text-primary-700 dark:text-primary-300">
             "People worry that computers will get too smart and take over the
             world, but the real problem is that they're too stupid and they've
             already taken over the world."
           </span>
         </blockquote>
         <div className="pl-6 mb-6">
-          <span className="block text-xs font-bold text-gray-500 italic">
+          <span className="block text-xs font-bold text-gray-500 dark:text-gray-400 italic">
             — Pedro Domingos
           </span>
         </div>
@@ -138,7 +138,7 @@ const SingleBlogPage = () => {
           className="w-full rounded-2xl object-cover h-[220px] sm:h-[260px] md:h-[300px] lg:h-[320px] mb-2"
         />
       </div>
-      <div className="max-w-4xl mx-auto w-full px-4 mb-12 text-gray-700 text-base leading-relaxed">
+      <div className="max-w-4xl mx-auto w-full px-4 mb-12 text-gray-700 dark:text-gray-300 text-base leading-relaxed">
         <p>
           We're so excited by the potential of generative AI, and the
           opportunities it will unlock — from helping people express themselves
@@ -151,7 +151,7 @@ const SingleBlogPage = () => {
       {/* Popular Post Section */}
       <section className="max-w-7xl mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 mb-20 mt-14">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8 md:mb-12 gap-4">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white">
             Popular Post
           </h2>
           <button
@@ -173,23 +173,23 @@ const SingleBlogPage = () => {
                 />
               </div>
               <div className="mb-2 flex items-center gap-2">
-                <span className="text-xs font-bold text-gray-900 uppercase tracking-wider">
+                <span className="text-xs font-bold text-gray-900 dark:text-white uppercase tracking-wider">
                   {post.category}
                 </span>
-                <span className="text-xs text-gray-500 font-normal">
+                <span className="text-xs text-gray-500 dark:text-gray-400 font-normal">
                   {post.date}
                 </span>
               </div>
-              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 leading-tight mb-2">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-white leading-tight mb-2">
                 {post.title}
               </h3>
-              <p className="text-gray-600 text-sm sm:text-base mb-4">
+              <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base mb-4">
                 {post.desc}
               </p>
               <button
                 type="button"
                 onClick={() => navigate(post.link)}
-                className="text-primary-600 font-semibold underline underline-offset-2 hover:text-primary-700 transition-colors duration-200 text-base text-left w-max"
+                className="text-primary-600 dark:text-primary-400 font-semibold underline underline-offset-2 hover:text-primary-700 dark:hover:text-primary-300 transition-colors duration-200 text-base text-left w-max"
               >
                 Read More...
               </button>
@@ -198,13 +198,15 @@ const SingleBlogPage = () => {
         </div>
       </section>
       {/* Newsletter Section */}
-      <section className="relative bg-primary-600 w-full flex flex-col items-center justify-center py-16 px-4 overflow-hidden mt-16">
+      <section className="relative bg-primary-600 w-full flex flex-col items-center justify-center py-16 px-4 overflow-hidden">
         <div className="relative z-10 flex flex-col items-center w-full max-w-xl mx-auto">
           <h2
             className="text-white font-bold text-center mb-8"
             style={{ fontSize: "clamp(1.5rem, 5vw, 2.5rem)", lineHeight: 1.2 }}
           >
-            Get our stories delivered From us to your inbox weekly.
+            Get our stories delivered
+            <br />
+            to your inbox weekly.
           </h2>
           <form
             className="flex flex-col sm:flex-row items-center w-full gap-4 mb-4"

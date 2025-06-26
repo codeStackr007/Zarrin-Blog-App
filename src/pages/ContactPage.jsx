@@ -104,20 +104,20 @@ const ContactPage = () => {
 
   return (
     <NewsletterProvider>
-      <main className="min-h-screen bg-[#fafafd] w-full">
+      <main className="min-h-screen bg-[#fafafd] dark:bg-gray-900 w-full">
         {/* Title & Subtitle */}
         <section className="max-w-7xl mx-auto w-full pt-16 pb-8 px-4 sm:px-6 md:px-8">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-gray-900 mb-2">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-gray-900 dark:text-white mb-2">
             Get in Touch
           </h1>
-          <p className="text-center text-gray-400 max-w-xl mx-auto mb-10 text-base sm:text-lg">
+          <p className="text-center text-gray-400 dark:text-gray-300 max-w-xl mx-auto mb-10 text-base sm:text-lg">
             Contact us to publish your content and show ads to our website and
             get a good reach.
           </p>
           {/* Info Cards */}
           <div className="flex flex-col md:flex-row gap-6 justify-center mb-12">
             {/* Office */}
-            <div className="flex-1 flex flex-col items-center bg-white rounded-2xl shadow-md p-8 min-w-[220px]">
+            <div className="flex-1 flex flex-col items-center bg-white dark:bg-gray-800 rounded-2xl shadow-md p-8 min-w-[220px]">
               <div className="flex items-center justify-center w-14 h-14 rounded-full bg-[#7f56d9] mb-4">
                 <img
                   src={require("../assets/images/Home.svg").default}
@@ -125,13 +125,15 @@ const ContactPage = () => {
                   className="w-7 h-7"
                 />
               </div>
-              <div className="font-bold text-gray-900 mb-1">Office</div>
-              <div className="text-gray-500 text-sm text-center">
+              <div className="font-bold text-gray-900 dark:text-white mb-1">
+                Office
+              </div>
+              <div className="text-gray-500 dark:text-gray-300 text-sm text-center">
                 Victoria Street, London, UK
               </div>
             </div>
             {/* Email */}
-            <div className="flex-1 flex flex-col items-center bg-white rounded-2xl shadow-md p-8 min-w-[220px]">
+            <div className="flex-1 flex flex-col items-center bg-white dark:bg-gray-800 rounded-2xl shadow-md p-8 min-w-[220px]">
               <div className="flex items-center justify-center w-14 h-14 rounded-full bg-[#7f56d9] mb-4">
                 <img
                   src={require("../assets/images/Email-Icon.svg").default}
@@ -139,13 +141,15 @@ const ContactPage = () => {
                   className="w-7 h-7"
                 />
               </div>
-              <div className="font-bold text-gray-900 mb-1">Email</div>
-              <div className="text-gray-500 text-sm text-center">
+              <div className="font-bold text-gray-900 dark:text-white mb-1">
+                Email
+              </div>
+              <div className="text-gray-500 dark:text-gray-300 text-sm text-center">
                 hello@zarrin.com
               </div>
             </div>
             {/* Phone */}
-            <div className="flex-1 flex flex-col items-center bg-white rounded-2xl shadow-md p-8 min-w-[220px]">
+            <div className="flex-1 flex flex-col items-center bg-white dark:bg-gray-800 rounded-2xl shadow-md p-8 min-w-[220px]">
               <div className="flex items-center justify-center w-14 h-14 rounded-full bg-[#7f56d9] mb-4">
                 <img
                   src={require("../assets/images/Phone-Icon.svg").default}
@@ -153,8 +157,10 @@ const ContactPage = () => {
                   className="w-7 h-7"
                 />
               </div>
-              <div className="font-bold text-gray-900 mb-1">Phone</div>
-              <div className="text-gray-500 text-sm text-center">
+              <div className="font-bold text-gray-900 dark:text-white mb-1">
+                Phone
+              </div>
+              <div className="text-gray-500 dark:text-gray-300 text-sm text-center">
                 (800) 234 3456
               </div>
             </div>
@@ -177,17 +183,19 @@ const ContactPage = () => {
           <form
             onSubmit={handleFormSubmit}
             noValidate
-            className="bg-white rounded-3xl shadow-lg p-8 md:p-14 w-full min-h-[600px] flex flex-col justify-between"
+            className="bg-white dark:bg-gray-800 rounded-3xl shadow-lg p-8 md:p-14 w-full min-h-[600px] flex flex-col justify-between"
           >
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-4">
               <div>
-                <label className="block text-gray-700 font-semibold mb-2">
+                <label className="block text-gray-700 dark:text-gray-200 font-semibold mb-2">
                   Name
                 </label>
                 <input
                   type="text"
-                  className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#7f56d9] transition-all duration-200 text-black ${
-                    formError.name ? "border-red-400" : "border-gray-200"
+                  className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#7f56d9] transition-all duration-200 text-black dark:text-white dark:bg-gray-700 ${
+                    formError.name
+                      ? "border-red-400"
+                      : "border-gray-200 dark:border-gray-600"
                   }`}
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
@@ -197,13 +205,15 @@ const ContactPage = () => {
                 )}
               </div>
               <div>
-                <label className="block text-gray-700 font-semibold mb-2">
+                <label className="block text-gray-700 dark:text-gray-200 font-semibold mb-2">
                   Email
                 </label>
                 <input
                   type="email"
-                  className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#7f56d9] transition-all duration-200 text-black ${
-                    formError.email ? "border-red-400" : "border-gray-200"
+                  className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#7f56d9] transition-all duration-200 text-black dark:text-white dark:bg-gray-700 ${
+                    formError.email
+                      ? "border-red-400"
+                      : "border-gray-200 dark:border-gray-600"
                   }`}
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
@@ -212,14 +222,18 @@ const ContactPage = () => {
                   <p className="text-red-500 text-xs mt-1">{formError.email}</p>
                 )}
               </div>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-4">
               <div>
-                <label className="block text-gray-700 font-semibold mb-2">
+                <label className="block text-gray-700 dark:text-gray-200 font-semibold mb-2">
                   Phone
                 </label>
                 <input
-                  type="text"
-                  className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#7f56d9] transition-all duration-200 text-black ${
-                    formError.phone ? "border-red-400" : "border-gray-200"
+                  type="tel"
+                  className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#7f56d9] transition-all duration-200 text-black dark:text-white dark:bg-gray-700 ${
+                    formError.phone
+                      ? "border-red-400"
+                      : "border-gray-200 dark:border-gray-600"
                   }`}
                   value={form.phone}
                   onChange={(e) => setForm({ ...form, phone: e.target.value })}
@@ -229,13 +243,15 @@ const ContactPage = () => {
                 )}
               </div>
               <div>
-                <label className="block text-gray-700 font-semibold mb-2">
+                <label className="block text-gray-700 dark:text-gray-200 font-semibold mb-2">
                   Subject
                 </label>
                 <input
                   type="text"
-                  className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#7f56d9] transition-all duration-200 text-black ${
-                    formError.subject ? "border-red-400" : "border-gray-200"
+                  className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#7f56d9] transition-all duration-200 text-black dark:text-white dark:bg-gray-700 ${
+                    formError.subject
+                      ? "border-red-400"
+                      : "border-gray-200 dark:border-gray-600"
                   }`}
                   value={form.subject}
                   onChange={(e) =>
@@ -250,41 +266,34 @@ const ContactPage = () => {
               </div>
             </div>
             <div className="mb-6">
-              <label className="block text-gray-700 font-semibold mb-2">
+              <label className="block text-gray-700 dark:text-gray-200 font-semibold mb-2">
                 Message
               </label>
               <textarea
-                className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#7f56d9] transition-all duration-200 text-black ${
-                  formError.message ? "border-red-400" : "border-gray-200"
+                rows="6"
+                className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#7f56d9] transition-all duration-200 text-black dark:text-white dark:bg-gray-700 resize-none ${
+                  formError.message
+                    ? "border-red-400"
+                    : "border-gray-200 dark:border-gray-600"
                 }`}
-                rows={5}
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
-              />
+              ></textarea>
               {formError.message && (
                 <p className="text-red-500 text-xs mt-1">{formError.message}</p>
               )}
             </div>
-            <div className="flex justify-center">
-              <button
-                type="submit"
-                className="bg-[#7f56d9] hover:bg-[#6c3fd7] text-white font-semibold rounded-md px-8 py-2 transition-colors duration-200 shadow-sm"
-              >
-                Send Message
-              </button>
-            </div>
+            <button
+              type="submit"
+              className="w-full bg-[#7f56d9] hover:bg-[#6941c6] text-white font-semibold py-3 px-6 rounded-md transition-colors duration-200"
+            >
+              Send Message
+            </button>
           </form>
         </section>
 
-        {/* Toaster for contact form */}
-        <Toaster
-          show={formSuccess}
-          message="Message sent successfully!"
-          onClose={() => setFormSuccess(false)}
-        />
-
         {/* Newsletter Section */}
-        <section className="relative bg-primary-600 w-full flex flex-col items-center justify-center py-16 px-4 overflow-hidden mt-16">
+        <section className="relative bg-primary-600 w-full flex flex-col items-center justify-center py-16 px-4 overflow-hidden">
           <div className="relative z-10 flex flex-col items-center w-full max-w-xl mx-auto">
             <h2
               className="text-white font-bold text-center mb-8"
@@ -304,6 +313,13 @@ const ContactPage = () => {
             </p>
           </div>
         </section>
+
+        <Toaster
+          show={formSuccess}
+          message="Message sent successfully!"
+          type="success"
+          onClose={() => setFormSuccess(false)}
+        />
       </main>
     </NewsletterProvider>
   );

@@ -28,7 +28,7 @@ const AboutPage = () => {
   };
 
   return (
-    <main className="bg-white w-full min-h-screen">
+    <main className="bg-white dark:bg-gray-900 w-full min-h-screen">
       {/* Hero/About Section */}
       <section className="w-full pt-16 pb-20 flex flex-col items-center justify-center">
         <div className="max-w-4xl w-full mx-auto text-center px-4 sm:px-6 lg:px-8 mb-16">
@@ -38,10 +38,10 @@ const AboutPage = () => {
           >
             ABOUT US
           </span>
-          <h1 className="text-[2rem] xs:text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 sm:mb-8 leading-tight">
+          <h1 className="text-[2rem] xs:text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 sm:mb-8 leading-tight">
             Creative Blog Writting and publishing site
           </h1>
-          <p className="text-gray-500 text-base xs:text-lg sm:text-xl mb-12 max-w-2xl mx-auto leading-relaxed text-center">
+          <p className="text-gray-500 dark:text-gray-300 text-base xs:text-lg sm:text-xl mb-12 max-w-2xl mx-auto leading-relaxed text-center">
             Leverage agile frameworks to provide a robust synopsis for high
             level overviews. Iterative approaches to corporate strategy foster
             collaborative thinking to further the overall value proposition.
@@ -57,19 +57,19 @@ const AboutPage = () => {
       </section>
 
       {/* How We Work Section */}
-      <section className="w-full py-16 sm:py-20 lg:py-24 bg-gray-50 flex flex-col items-center">
+      <section className="w-full py-16 sm:py-20 lg:py-24 bg-gray-50 dark:bg-[rgb(17_24_39)] flex flex-col items-center">
         <div className="max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8">
-          <span className="block text-xs sm:text-sm font-semibold text-gray-400 tracking-widest mb-6 uppercase text-left">
+          <span className="block text-xs sm:text-sm font-semibold text-gray-400 dark:text-gray-500 tracking-widest mb-6 uppercase text-left">
             HOW WE WORK
           </span>
           <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-12 sm:mb-16 gap-6 lg:gap-8">
             <div className="flex-1">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2 leading-tight text-left">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-2 leading-tight text-left">
                 I will show you how our team works
               </h2>
             </div>
             <div className="flex-1 lg:max-w-md">
-              <p className="text-gray-500 text-sm sm:text-base lg:text-lg text-left leading-relaxed">
+              <p className="text-gray-500 dark:text-gray-300 text-sm sm:text-base lg:text-lg text-left leading-relaxed">
                 Bring to the table win-win market strategies
                 <br className="block sm:hidden" />
                 to ensure perfect articles.
@@ -109,8 +109,8 @@ const AboutPage = () => {
             </div>
 
             {/* Card 2 - Light Gray (now same as Card 3) */}
-            <div className="w-full lg:w-[600px] bg-white rounded-xl p-4 sm:p-6 pb-3 lg:pb-6 min-h-[120px] sm:min-h-[140px] flex flex-col border border-gray-200">
-              <div className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-gray-300">
+            <div className="w-full lg:w-[600px] bg-white dark:bg-gray-900 rounded-xl p-4 sm:p-6 pb-3 lg:pb-6 min-h-[120px] sm:min-h-[140px] flex flex-col border border-gray-200 dark:border-gray-700">
+              <div className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-gray-300 dark:text-gray-600">
                 02
               </div>
               <h3
@@ -119,7 +119,7 @@ const AboutPage = () => {
               >
                 Analysing
               </h3>
-              <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
+              <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed flex-grow">
                 Capitalize on low hanging fruit to identify a ballpark value
                 added activity to beta test. Override the digital divide with
                 additional clickthroughs from DevOps. Nanotechnology immersion
@@ -129,8 +129,8 @@ const AboutPage = () => {
             </div>
 
             {/* Card 3 - Light Gray */}
-            <div className="w-full lg:w-[600px] bg-white rounded-xl p-4 sm:p-6 pb-3 lg:pb-6 min-h-[120px] sm:min-h-[140px] flex flex-col border border-gray-200">
-              <div className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-gray-300">
+            <div className="w-full lg:w-[600px] bg-white dark:bg-gray-900 rounded-xl p-4 sm:p-6 pb-3 lg:pb-6 min-h-[120px] sm:min-h-[140px] flex flex-col border border-gray-200 dark:border-gray-700">
+              <div className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-gray-300 dark:text-gray-600">
                 03
               </div>
               <h3
@@ -139,7 +139,7 @@ const AboutPage = () => {
               >
                 News Publishing
               </h3>
-              <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
+              <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed flex-grow">
                 Leverage agile frameworks to provide a robust synopsis for high
                 level overviews. Iterative approaches to corporate strategy
                 foster collaborative thinking to further the overall value
