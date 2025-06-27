@@ -108,7 +108,7 @@ const AboutPage = () => {
               </button>
             </div>
 
-            {/* Card 2 - Light Gray (now same as Card 3) */}
+            {/* Card 2 - Light Gray */}
             <div className="w-full lg:w-[600px] bg-white dark:bg-gray-900 rounded-xl p-4 sm:p-6 pb-3 lg:pb-6 min-h-[120px] sm:min-h-[140px] flex flex-col border border-gray-200 dark:border-gray-700">
               <div className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-gray-300 dark:text-gray-600">
                 02

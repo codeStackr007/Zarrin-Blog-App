@@ -153,7 +153,7 @@ const LandingPage = () => {
       </section>
 
       {/* Featured Blog Section (VR & AI) */}
-      <section className="relative flex justify-center items-center bg-gray-50 dark:bg-gray-900 py-16 px-2 md:h-screen mb-8 md:mb-16">
+      <section className="relative flex justify-center items-center bg-gray-50 dark:bg-gray-900 py-12 sm:py-16 px-4 sm:px-6 md:px-8 lg:px-12 mb-8 md:mb-12 lg:mb-32">
         {/* Desktop/Tablet: Overlapping Card Layout */}
         <div className="max-w-6xl w-full mx-auto hidden md:block">
           <div className="relative w-full">
@@ -239,10 +239,10 @@ const LandingPage = () => {
       </section>
 
       {/* Our Recent Post Section */}
-      <section className="py-16 px-4 sm:px-6 md:px-8 lg:px-12 mb-0">
+      <section className="pt-8 sm:pt-12 lg:pt-20 pb-12 sm:pb-16 px-4 sm:px-6 md:px-8 lg:px-12">
         <div className="max-w-7xl mx-auto w-full">
           {/* Header Row */}
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8 md:mb-12 gap-4">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8 gap-4">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white">
               Our Recent Post
             </h2>
@@ -309,7 +309,7 @@ const LandingPage = () => {
       </section>
 
       {/* Blog Grid Section */}
-      <section className="py-16 px-4 sm:px-6 md:px-8 lg:px-12 mb-0">
+      <section className="py-12 sm:py-16 px-4 sm:px-6 md:px-8 lg:px-12">
         <div className="max-w-7xl mx-auto w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
             {posts.map((post, idx) => (
@@ -349,12 +349,9 @@ const LandingPage = () => {
       </section>
 
       {/* Popular Post Section */}
-      <section
-        className="px-4 sm:px-6 md:px-8 lg:px-12 mb-0"
-        style={{ paddingTop: "1.5rem", paddingBottom: "4rem" }}
-      >
+      <section className="py-12 sm:py-16 px-4 sm:px-6 md:px-8 lg:px-12">
         <div className="max-w-7xl mx-auto w-full">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8 md:mb-12 gap-4">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8 gap-4">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white">
               Popular Post
             </h2>

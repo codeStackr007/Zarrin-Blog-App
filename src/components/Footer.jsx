@@ -1,108 +1,101 @@
 import React from "react";
-import { useNavigate, NavLink } from "react-router-dom";
-
-const currentYear = new Date().getFullYear();
+import { Link } from "react-router-dom";
 
 const Footer = () => {
-  const navigate = useNavigate();
-  // For external links, just scroll to top
-  const handleExternalClick = (e) => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-  // For nav links, scroll instantly to top
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="bg-white dark:bg-gray-900 pt-0 pb-0 px-0 border-t border-primary-200 dark:border-gray-700">
-      <div className="flex flex-col items-center justify-center w-full max-w-4xl mx-auto pt-10 pb-6">
-        {/* Logo */}
-        <img
-          src={require("../assets/images/Logo.svg").default}
-          alt="Zarrin Logo"
-          className="h-8 sm:h-9 md:h-10 lg:h-11 xl:h-12 w-auto mb-6 object-contain cursor-pointer dark:hidden"
-          onClick={() => {
-            navigate("/");
-            window.scrollTo({ top: 0, behavior: "auto" });
-          }}
-        />
-        <img
-          src={require("../assets/images/Logo - Dark theme.svg").default}
-          alt="Zarrin Logo"
-          className="h-8 sm:h-9 md:h-10 lg:h-11 xl:h-12 w-auto mb-6 object-contain cursor-pointer hidden dark:block"
-          onClick={() => {
-            navigate("/");
-            window.scrollTo({ top: 0, behavior: "auto" });
-          }}
-        />
-        {/* Nav links */}
-        <nav className="flex flex-wrap justify-center gap-x-8 gap-y-2 mb-6">
-          {[
-            { href: "/", label: "Home" },
-            { href: "/blog", label: "Blog" },
-            { href: "/about", label: "About" },
-            { href: "/contact", label: "Contact Us" },
-          ].map((link) => (
-            <NavLink
-              key={link.href + link.label}
-              to={link.href}
-              className={({ isActive }) =>
-                `text-gray-800 dark:text-gray-200 font-medium transition-colors duration-200 py-1 px-2 hover:text-primary-600 dark:hover:text-primary-400` +
-                (isActive ? " text-primary-600 dark:text-primary-400" : "")
-              }
-              end={link.href === "/"}
+    <footer className="bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="flex flex-col items-center space-y-8">
+          {/* logo */}
+          <div className="flex items-center cursor-pointer select-none">
+            <img
+              src={require("../assets/images/Logo.svg").default}
+              alt="Zarrin Logo"
+              className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 xl:w-36 xl:h-36 max-w-full object-contain transition-all duration-300 ease-in-out hover:scale-105 hover:drop-shadow-lg dark:hidden"
+            />
+            <img
+              src={require("../assets/images/Logo - Dark theme.svg").default}
+              alt="Zarrin Logo"
+              className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 xl:w-36 xl:h-36 max-w-full object-contain transition-all duration-300 ease-in-out hover:scale-105 hover:drop-shadow-lg hidden dark:block"
+            />
+          </div>
+
+          {/* nav links */}
+          <nav className="flex flex-wrap justify-center gap-8 text-sm">
+            <Link
+              to="/blog"
+              className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200 font-medium"
             >
-              {link.label}
-            </NavLink>
-          ))}
-        </nav>
-        {/* Social icons */}
-        <div className="flex flex-wrap justify-center gap-3 mb-8">
-          <a
-            href="https://facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Facebook"
-            className="bg-primary-600 hover:bg-primary-700 text-white rounded-full flex items-center justify-center text-sm font-bold w-9 h-9 transition-colors duration-200"
-            onClick={handleExternalClick}
-          >
-            FB
-          </a>
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-            className="bg-primary-600 hover:bg-primary-700 text-white rounded-full flex items-center justify-center text-sm font-bold w-9 h-9 transition-colors duration-200"
-            onClick={handleExternalClick}
-          >
-            IG
-          </a>
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-            className="bg-primary-600 hover:bg-primary-700 text-white rounded-full flex items-center justify-center text-sm font-bold w-9 h-9 transition-colors duration-200"
-            onClick={handleExternalClick}
-          >
-            LN
-          </a>
-          <a
-            href="https://youtube.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="YouTube"
-            className="bg-primary-600 hover:bg-primary-700 text-white rounded-full flex items-center justify-center text-sm font-bold w-9 h-9 transition-colors duration-200"
-            onClick={handleExternalClick}
-          >
-            YT
-          </a>
+              Blog
+            </Link>
+            <Link
+              to="/about"
+              className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200 font-medium"
+            >
+              About
+            </Link>
+            <Link
+              to="/contact"
+              className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200 font-medium"
+            >
+              Contact
+            </Link>
+          </nav>
+
+          {/* social icons */}
+          <div className="flex space-x-6">
+            <a
+              href="#"
+              className="text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
+              aria-label="Twitter"
+            >
+              <svg
+                className="w-6 h-6 sm:w-5 sm:h-5"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+              </svg>
+            </a>
+            <a
+              href="#"
+              className="text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
+              aria-label="LinkedIn"
+            >
+              <svg
+                className="w-6 h-6 sm:w-5 sm:h-5"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+            <a
+              href="#"
+              className="text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
+              aria-label="GitHub"
+            >
+              <svg
+                className="w-6 h-6 sm:w-5 sm:h-5"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+            </a>
+          </div>
         </div>
-        {/* Divider */}
-        <div className="w-full mb-2 -mx-4 sm:-mx-6 md:-mx-8 lg:-mx-12">
-          <hr className="border-t border-primary-200 dark:border-gray-700" />
-        </div>
-        {/* Copyright */}
-        <div className="text-center font-normal text-gray-700 dark:text-gray-300 text-sm pb-4 mt-4">
-          Copyright Ideapeel Inc © {currentYear}. All Right Reserved
+      </div>
+
+      {/* divider */}
+      <div className="border-t border-gray-100 dark:border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          {/* copyright */}
+          <p className="text-center text-gray-500 dark:text-gray-400 text-sm">
+            © {currentYear} Zarrin. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
