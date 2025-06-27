@@ -122,7 +122,7 @@ const LandingPage = () => {
               <span className="block">Change the Future</span>
             </h1>
 
-            <p className="text-sm sm:text-base xl:text-xl text-primary-100 dark:text-gray-200 mb-6 xl:mb-10 leading-relaxed">
+            <p className="text-primary-100 dark:text-gray-200 mb-6 xl:mb-10 leading-relaxed max-w-xl sm:max-w-2xl text-base sm:text-lg xl:text-xl font-medium">
               The future of AI will see home robots having enhanced
               intelligence, increased capabilities, and becoming more personal
               and possibly cute. For example, home robots will overcome
@@ -153,7 +153,7 @@ const LandingPage = () => {
       </section>
 
       {/* Featured Blog Section (VR & AI) */}
-      <section className="relative flex justify-center items-center bg-gray-50 dark:bg-gray-900 py-12 sm:py-16 px-4 sm:px-6 md:px-8 lg:px-12 mb-8 md:mb-12 lg:mb-32">
+      <section className="relative flex justify-center items-center bg-gray-50 dark:bg-gray-900 py-12 sm:py-16 px-4 sm:px-6 md:px-8 lg:px-12 mb-24 md:mb-32">
         {/* Desktop/Tablet: Overlapping Card Layout */}
         <div className="max-w-6xl w-full mx-auto hidden md:block">
           <div className="relative w-full">
@@ -166,7 +166,7 @@ const LandingPage = () => {
               />
             </div>
             {/* Overlapping Card */}
-            <div className="absolute right-0 bottom-0 translate-y-1/2 md:w-[80%] lg:w-[65%] xl:w-[75%] bg-white dark:bg-gray-900 rounded-3xl shadow-xl p-6 sm:p-10 border border-gray-200 dark:border-gray-700 overflow-hidden">
+            <div className="absolute right-0 bottom-0 translate-y-1/2 md:translate-y-1/3 md:w-[90%] lg:w-[65%] xl:w-[75%] bg-white dark:bg-gray-900 rounded-3xl shadow-xl p-6 sm:p-10 border border-gray-200 dark:border-gray-700 overflow-hidden">
               <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400 font-semibold mb-2">
                 <span className="text-black dark:text-white font-bold">
                   DEVELOPMENT
@@ -239,7 +239,7 @@ const LandingPage = () => {
       </section>
 
       {/* Our Recent Post Section */}
-      <section className="pt-8 sm:pt-12 lg:pt-20 pb-12 sm:pb-16 px-4 sm:px-6 md:px-8 lg:px-12">
+      <section className="pt-2 sm:pt-12 lg:pt-20 pb-12 sm:pb-16 px-4 sm:px-4 md:px-8 lg:px-12">
         <div className="max-w-7xl mx-auto w-full">
           {/* Header Row */}
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8 gap-4">

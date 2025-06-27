@@ -17,7 +17,7 @@ function App() {
   return (
     <DarkModeProvider>
       <Router>
-        <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+        <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300 font-raleway">
           <ScrollToTop />
           <Navbar />
           <main className="flex-grow">
