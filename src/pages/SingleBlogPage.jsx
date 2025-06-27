@@ -156,7 +156,7 @@ const SingleBlogPage = () => {
           </h2>
           <button
             type="button"
-            onClick={() => navigate("/single-blog")}
+            onClick={() => navigate("/blog/1")}
             className="bg-primary-600 hover:bg-primary-700 text-white font-semibold px-6 py-2.5 rounded-lg transition-colors duration-200 shadow-sm text-sm sm:text-base w-full sm:w-auto"
           >
             View All
@@ -188,7 +188,7 @@ const SingleBlogPage = () => {
               </p>
               <button
                 type="button"
-                onClick={() => navigate(post.link)}
+                onClick={() => navigate("/blog/1")}
                 className="text-primary-600 dark:text-primary-400 font-semibold underline underline-offset-2 hover:text-primary-700 dark:hover:text-primary-300 transition-colors duration-200 text-base text-left w-max"
               >
                 Read More...

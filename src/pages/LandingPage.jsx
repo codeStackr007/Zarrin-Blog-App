@@ -131,7 +131,7 @@ const LandingPage = () => {
 
             <button
               type="button"
-              onClick={() => navigate("/single-blog")}
+              onClick={() => navigate("/blog/1")}
               className="inline-block bg-white text-primary-600 dark:text-gray-900 font-semibold rounded-lg px-6 sm:px-8 py-3 shadow-sm hover:bg-primary-50 dark:hover:bg-gray-100 transition-colors duration-200 text-base sm:text-lg w-full lg:w-auto text-center mb-8 xl:mb-0"
             >
               Read more
@@ -188,7 +188,7 @@ const LandingPage = () => {
               </p>
               <button
                 type="button"
-                onClick={() => navigate("/single-blog")}
+                onClick={() => navigate("/blog/1")}
                 className="mt-2 w-max px-6 py-2 rounded-lg bg-primary-50 dark:bg-primary-900 text-primary-600 dark:text-primary-400 font-semibold shadow-sm hover:bg-primary-100 dark:hover:bg-primary-800 transition-colors duration-200 border border-primary-100 dark:border-primary-800"
               >
                 Read More
@@ -229,7 +229,7 @@ const LandingPage = () => {
             </p>
             <button
               type="button"
-              onClick={() => navigate("/single-blog")}
+              onClick={() => navigate("/blog/1")}
               className="mt-2 w-max px-6 py-2 rounded-lg bg-white dark:bg-gray-800 text-primary-600 dark:text-primary-400 font-semibold shadow-sm hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors duration-200 border border-primary-200 dark:border-gray-600"
             >
               Read More
@@ -248,7 +248,7 @@ const LandingPage = () => {
             </h2>
             <button
               type="button"
-              onClick={() => navigate("/single-blog")}
+              onClick={() => navigate("/blog/1")}
               className="bg-primary-600 hover:bg-primary-700 text-white font-semibold px-6 py-2.5 rounded-lg transition-colors duration-200 shadow-sm text-sm sm:text-base w-full sm:w-auto"
             >
               View All
@@ -297,7 +297,7 @@ const LandingPage = () => {
               <div>
                 <button
                   type="button"
-                  onClick={() => navigate("/single-blog")}
+                  onClick={() => navigate("/blog/1")}
                   className="inline-flex items-center px-6 py-2.5 rounded-lg bg-primary-50 dark:bg-primary-900 text-primary-600 dark:text-primary-400 font-semibold shadow-sm hover:bg-primary-100 dark:hover:bg-primary-800 transition-colors duration-200 border border-primary-200 dark:border-primary-800 text-sm sm:text-base"
                 >
                   Read More
@@ -337,7 +337,7 @@ const LandingPage = () => {
                 </p>
                 <button
                   type="button"
-                  onClick={() => navigate(post.link)}
+                  onClick={() => navigate("/blog/1")}
                   className="text-primary-600 dark:text-primary-400 font-semibold underline underline-offset-2 hover:text-primary-700 dark:hover:text-primary-300 transition-colors duration-200 text-base text-left w-max"
                 >
                   Read More...
@@ -357,7 +357,7 @@ const LandingPage = () => {
             </h2>
             <button
               type="button"
-              onClick={() => navigate("/single-blog")}
+              onClick={() => navigate("/blog/1")}
               className="bg-primary-600 hover:bg-primary-700 text-white font-semibold px-6 py-2.5 rounded-lg transition-colors duration-200 shadow-sm text-sm sm:text-base w-full sm:w-auto"
             >
               View All
@@ -389,7 +389,7 @@ const LandingPage = () => {
                 </p>
                 <button
                   type="button"
-                  onClick={() => navigate(post.link)}
+                  onClick={() => navigate("/blog/1")}
                   className="text-primary-600 dark:text-primary-400 font-semibold underline underline-offset-2 hover:text-primary-700 dark:hover:text-primary-300 transition-colors duration-200 text-base text-left w-max"
                 >
                   Read More...

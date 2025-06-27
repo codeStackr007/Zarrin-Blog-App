@@ -144,7 +144,7 @@ const BlogPage = () => {
               </p>
               <button
                 type="button"
-                onClick={() => navigate(post.link)}
+                onClick={() => navigate("/blog/1")}
                 className="text-primary-600 dark:text-primary-400 font-semibold underline underline-offset-2 hover:text-primary-700 dark:hover:text-primary-300 transition-colors duration-200 text-base text-left w-max"
               >
                 Read More...
