@@ -100,7 +100,7 @@ const AboutPage = () => {
               </p>
               <button
                 type="button"
-                onClick={() => navigate("/single-blog")}
+                onClick={() => navigate("/blog/1")}
                 className="text-white font-bold underline underline-offset-4 decoration-2 rounded-md px-4 py-2 transition-all duration-200 border-none bg-transparent cursor-pointer text-sm sm:text-base text-left self-start hover:bg-white/10"
                 style={{ borderRadius: "0.5rem" }}
               >
